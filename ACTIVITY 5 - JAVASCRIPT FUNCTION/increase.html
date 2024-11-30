@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Size Control</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Layout */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Container to center content */
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Button Styles */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Text Paragraph */
+        #text {
+            font-size: 16px;  /* initial font size */
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="increaseSize()">+ Increase</button>
+        <button onclick="decreaseSize()">- Decrease</button>
+        <p id="text">This is the text whose size will change.</p>
+    </div>
+
+    <script>
+        let fontSize = 16;
+
+        function increaseSize() {
+            fontSize += 2;
+            document.getElementById("text").style.fontSize = fontSize + "px";
+        }
+
+        function decreaseSize() {
+            fontSize -= 2;
+            document.getElementById("text").style.fontSize = fontSize + "px";
+        }
+    </script>
+</body>
+</html>

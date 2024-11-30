@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MDAS Calculator</title>
+	<style>
+		/* Basic Reset */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		/* Body and Page Layout */
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f9;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			padding: 20px;
+		}
+
+		/* Container for the form */
+		#calculator-form {
+			background-color: #ffffff;
+			padding: 30px;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 300px;
+			text-align: center;
+		}
+
+		/* Heading Style */
+		h1 {
+			font-size: 24px;
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		/* Input Fields */
+		input[type="number"] {
+			width: 80%;
+			padding: 10px;
+			margin: 10px 0;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			text-align: center;
+		}
+
+		/* Button Style */
+		button {
+			width: 85%;
+			padding: 10px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-top: 15px;
+		}
+
+		button:hover {
+			background-color: #45a049;
+		}
+
+		/* Result Display */
+		#result {
+			font-size: 18px;
+			margin-top: 20px;
+			color: #333;
+			font-weight: bold;
+		}
+
+		/* Special styling for the operation signs */
+		#calculator-form br {
+			display: block;
+			margin: 5px 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>MDAS Calculator</h1>
+	<form id="calculator-form">
+		<input type="number" id="num1" placeholder="Nambah 1"><br>
+		<br>*<br><br>
+		<input type="number" id="num2" placeholder="Nambah 2"><br>
+		<br>/<br><br>
+		<input type="number" id="num3" placeholder="Nambah 3"><br>
+		<br>+<br><br>
+		<input type="number" id="num4" placeholder="Nambah 4"><br>
+		<br>-<br><br>
+		<input type="number" id="num5" placeholder="Nambah 5"><br><br><br>
+		<button type="submit">Calculate</button>
+		<p id="result"></p>
+	</form>
+
+	<script>
+	document.getElementById('calculator-form').onsubmit = function(event) {
+		event.preventDefault(); // Prevents form from refreshing the page
+		
+		const num1 = parseFloat(document.getElementById('num1').value);
+		const num2 = parseFloat(document.getElementById('num2').value);
+		const num3 = parseFloat(document.getElementById('num3').value);
+		const num4 = parseFloat(document.getElementById('num4').value);
+		const num5 = parseFloat(document.getElementById('num5').value);
+		
+		numdata(num1, num2, num3, num4, num5);
+	}
+	
+	function numdata(num1, num2, num3, num4, num5) {
+		const product = num1 * num2;
+		const quotient = product / num3;
+		const sum = quotient + num4;
+		const diff = sum - num5;
+		
+		document.getElementById('result').innerText = 'Result: ' + diff;
+	}
+	</script>
+</body>
+</html>
