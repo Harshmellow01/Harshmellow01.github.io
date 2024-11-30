@@ -4,7 +4,7 @@ html {
 body{
     padding:0;
     margin:0;
-    background-image: url("img/bgblur.jpg");
+    background-image: url("/img/bgblur.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 20% 100%;
@@ -23,7 +23,7 @@ body{
         margin: 4% 20%;
         width: 65%;
         height: 80%;
-        background-image: url("img/bg.jpeg");
+        background-image: url("/img/bg.jpeg");
         background-repeat: no-repeat;
         background-size:100vw;
         background-position: 60% 80%;
@@ -68,7 +68,7 @@ body{
     }
 
     #img{
-        background-image: url("img/profile.jpg");
+        background-image: url("/img/profile.jpg");
         background-size: 50vh;
         background-position: 50% 30%;
     width:15%;
